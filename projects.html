@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Projects</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">My Portfolio</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+</nav>
+
+<main>
+  <h1 class="page-title">My Projects</h1>
+
+  <div class="container project-grid">
+    <div class="project-card" id="proj1">
+        <h3>Project 1</h3>
+        <p>Description of your project.</p>
+    </div>
+
+    <div class="project-card" id="proj2">
+        <h3>Project 2</h3>
+        <p>Description of your project.</p>
+    </div>
+
+    <div class="project-card" id="proj3">
+        <h3>Project 3</h3>
+        <p>Description of your project.</p>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 Katrina Joy Gonzalvo</footer>
+
+<script>
+  // slide-up animation for all project cards
+  window.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((c, i) => {
+      c.style.animation = 'fadeInUp 650ms ease forwards';
+      c.style.animationDelay = (150 + i*140) + 'ms';
+    });
+  });
+</script>
+
+</body>
+</html>
