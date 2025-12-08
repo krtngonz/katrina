@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact Me</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">My Portfolio</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" id="navContact">Contact Me</a>
+    </div>
+</nav>
+
+<main>
+  <h1 class="page-title">Contact Me</h1>
+
+  <div class="container">
+    <p>You can reach me at:</p>
+
+    <ul>
+        <li>Email: <strong>Katrinajoygonzalvo@gmail.com</strong></li>
+        <li>Facebook: <strong>facebook.com/yourprofile</strong></li>
+        <li>Phone: <strong>09701011643</strong></li>
+    </ul>
+
+    <p style="margin-top:18px; color:var(--muted);">Click "Contact Me" in the navigation to open the contact panel (or it will open automatically on this page).</p>
+  </div>
+</main>
+
+<footer>© 2025 Katrina Joy Gonzalvo</footer>
+
+<!-- CONTACT SLIDE PANEL (hidden off-canvas, opens from right) -->
+<aside class="contact-panel" id="contactPanel" aria-hidden="true">
+  <button id="closePanel" style="align-self:flex-end; background:none; border:none; font-size:1.1rem; color:var(--muted); cursor:pointer;">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <h3>Contact Information</h3>
+  <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><div>Katrinajoygonzalvo@gmail.com</div></div></div>
+  <div class="contact-item"><i class="fa-brands fa-facebook"></i><div><strong>Facebook</strong><div>facebook.com/yourprofile</div></div></div>
+  <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><div>09701011643</div></div></div>
+
+  <div style="margin-top:14px;">
+    <h4 style="margin:0 0 8px 0;">Follow me</h4>
+    <div class="social-row">
+      <!-- Replace href="#" with your real links -->
+      <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+    </div>
+  </div>
+</aside>
+
+<script>
+  // open contact panel when on contact page or when nav contact clicked
+  const panel = document.getElementById('contactPanel');
+  const closeBtn = document.getElementById('closePanel');
+  const navContact = document.getElementById('navContact');
+
+  function openPanel() {
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden','false');
+  }
+  function closePanel() {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden','true');
+  }
+
+  // open automatically when page loads (this happens after clicking Contact from nav)
+  window.addEventListener('DOMContentLoaded', () => {
+    // small timeout so the slide effect looks smooth after navigation
+    setTimeout(openPanel, 150);
+  });
+
+  closeBtn.addEventListener('click', closePanel);
+
+  // in case user clicks nav contact without page reload (SPA-like), add listener
+  navContact && navContact.addEventListener('click', (e) => {
+    // if the link navigates to the same page, allow default; panel opens on load anyway.
+    // Prevent default only if we want to open without navigating (not necessary here),
+    // so no preventDefault to keep simple site structure.
+  });
+</script>
+
+</body>
+</html>
