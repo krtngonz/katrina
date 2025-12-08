@@ -1,75 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Skills</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Skills - Katrina Joy Gonzalvo</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <nav>
-    <div class="logo">My Portfolio</div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact Me</a>
-    </div>
+  <div class="logo">My Portfolio</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="#" id="openContactSkills">Contact</a>
+  </div>
 </nav>
 
 <main>
   <h1 class="page-title">Skills</h1>
 
-  <div class="container">
-    <p id="skillsLead">The following are my core skills, demonstrating my ability to manage information with accuracy, solve problems, and work effectively with a team and schedule:</p>
+  <section class="container">
+    <p id="skillsLead" style="color:var(--muted)">The following are my core skills, demonstrating my ability to manage information with accuracy, solve problems, and work effectively with a team and schedule:</p>
 
     <div style="margin-top:18px;">
-      <div class="skill-item" id="skill1">
-        <i class="fa-solid fa-keyboard"></i>
-        <div>Data Encoding</div>
-      </div>
-
-      <div class="skill-item" id="skill2">
-        <i class="fa-solid fa-folder-open"></i>
-        <div>Document Filing &amp; Organizing</div>
-      </div>
-
-      <div class="skill-item" id="skill3">
-        <i class="fa-solid fa-lightbulb"></i>
-        <div>Problem Solving</div>
-      </div>
-
-      <div class="skill-item" id="skill4">
-        <i class="fa-solid fa-people-group"></i>
-        <div>Teamwork</div>
-      </div>
-
-      <div class="skill-item" id="skill5">
-        <i class="fa-solid fa-clock"></i>
-        <div>Time Management</div>
-      </div>
+      <div class="skill-item" id="sk1"><i class="fa-solid fa-keyboard"></i><div>Data Encoding</div></div>
+      <div class="skill-item" id="sk2"><i class="fa-solid fa-folder-open"></i><div>Document Filing &amp; Organizing</div></div>
+      <div class="skill-item" id="sk3"><i class="fa-solid fa-lightbulb"></i><div>Problem Solving</div></div>
+      <div class="skill-item" id="sk4"><i class="fa-solid fa-people-group"></i><div>Teamwork</div></div>
+      <div class="skill-item" id="sk5"><i class="fa-solid fa-clock"></i><div>Time Management</div></div>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer>© 2025 Katrina Joy Gonzalvo</footer>
 
+<!-- overlay + sidebar -->
+<div class="overlay" id="overlaySkills" aria-hidden="true"></div>
+
+<aside class="contact-sidebar" id="contactSidebarSkills" aria-hidden="true">
+  <button class="close-btn" id="closeSidebarSkills"><i class="fa-solid fa-xmark"></i></button>
+
+  <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
+  <div class="contact-row"><i class="fa-solid fa-envelope"></i><div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div></div>
+  <div class="contact-row"><i class="fa-solid fa-phone"></i><div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div></div>
+  <div class="contact-row"><i class="fa-solid fa-location-dot"></i><div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div></div>
+
+  <h4 style="margin-top:12px; margin-bottom:8px; color:var(--deep-lavender)">Social Websites</h4>
+  <div class="social-row">
+    <a href="https://www.instagram.com/katrinajoygonz?igsh=ZnpkYjRiM28za2Jv" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/katrina.gonz.11" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.tiktok.com/@commander_rina?_r=1&_t=ZS-922joKFxwlV" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@momentswithkatrina?si=o5XLHXzA6e2H6lvM" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</aside>
+
 <script>
+  // open/close for skills page sidebar
+  const openSkills = document.getElementById('openContactSkills');
+  const sideSkills = document.getElementById('contactSidebarSkills');
+  const overlaySkills = document.getElementById('overlaySkills');
+  const closeSkills = document.getElementById('closeSidebarSkills');
+
+  function openS(){ sideSkills.classList.add('open'); overlaySkills.classList.add('show'); sideSkills.setAttribute('aria-hidden','false'); overlaySkills.setAttribute('aria-hidden','false'); }
+  function closeS(){ sideSkills.classList.remove('open'); overlaySkills.classList.remove('show'); sideSkills.setAttribute('aria-hidden','true'); overlaySkills.setAttribute('aria-hidden','true'); }
+
+  openSkills && openSkills.addEventListener('click', e => { e.preventDefault(); openS(); });
+  closeSkills && closeSkills.addEventListener('click', closeS);
+  overlaySkills && overlaySkills.addEventListener('click', closeS);
+
+  // animate lead + skills
   window.addEventListener('DOMContentLoaded', () => {
-    // lead slide-up
     const lead = document.getElementById('skillsLead');
     lead.classList.add('anim-fade-up','delay-1');
 
-    // animate each skill item upward with small stagger
-    const skillIds = ['skill1','skill2','skill3','skill4','skill5'];
-    skillIds.forEach((id, i) => {
+    const ids = ['sk1','sk2','sk3','sk4','sk5'];
+    ids.forEach((id,i)=>{
       const el = document.getElementById(id);
-      el.style.animation = 'fadeInUp 600ms ease forwards';
-      el.style.animationDelay = (200 + i*110) + 'ms';
+      el.style.animation = 'fadeInUp .6s ease forwards';
+      el.style.animationDelay = (200 + i*100) + 'ms';
     });
   });
 </script>
