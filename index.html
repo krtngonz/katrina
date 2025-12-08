@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - My Portfolio</title>
+
+  <!-- Font Awesome for icons (used in other pages) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">My Portfolio</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+</nav>
+
+<main>
+  <h1 class="page-title">Welcome to My Portfolio!</h1>
+
+  <div class="container flex-row" style="align-items:center;">
+    <!-- framed larger photo with fade-in -->
+    <div style="flex: 0 0 auto;">
+      <img src="homepage.jpg" alt="Katrina Joy - portrait" class="profile-pic home" id="homePhoto">
+    </div>
+
+    <div class="col">
+      <div class="name-block" id="homeText">
+        <h2 style="margin:0 0 10px 0;">Katrina Joy Gonzalvo</h2>
+        <p class="lead">Aspiring Office Administration professional passionate about optimizing workflow, organizing data, and supporting teams efficiently.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 Katrina Joy Gonzalvo</footer>
+
+<script>
+  // trigger animations on load (staggered)
+  window.addEventListener('DOMContentLoaded', () => {
+    const photo = document.getElementById('homePhoto');
+    const text = document.getElementById('homeText');
+
+    // photo fade-in
+    photo.classList.add('anim-fade','delay-1');
+
+    // text slide-left
+    text.classList.add('anim-slide-left','delay-2');
+  });
+</script>
+
+</body>
+</html>
