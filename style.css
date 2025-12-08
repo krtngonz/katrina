@@ -235,3 +235,70 @@ footer {
 /* small helpers */
 .justify { text-align: justify; }
 .center { text-align: center; }
+
+/* CONTACT SIDEBAR */
+.contact-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; /* nakatago muna */
+    width: 350px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+    padding: 30px;
+    transition: 0.4s ease;
+    z-index: 9999;
+}
+
+.contact-sidebar.open {
+    right: 0; /* lalabas */
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.contact-item i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #444;
+}
+
+.social-title {
+    margin-top: 30px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 28px;
+}
+
+.social-icons a {
+    color: #333;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Placeholder center text */
+.contact-placeholder {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
