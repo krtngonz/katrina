@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About Me</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+    <div class="logo">My Portfolio</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+</nav>
+
+<main>
+  <h1 class="page-title">About Me</h1>
+
+  <div class="container">
+    <div class="about-wrap">
+      <!-- Left: circle photo (zoom in) -->
+      <div>
+        <img src="aboutme.JPG" alt="Katrina Joy photo" class="about-photo" id="aboutPhoto">
+      </div>
+
+      <!-- Right: first paragraph (slide-left) -->
+      <div id="aboutIntro" class="justify">
+        <p><strong>Hello!</strong> My name is Katrina Joy Gonzalvo. I graduated with a Bachelor of Science in Office Administration, a program that helped me develop strong skills in Microsoft Office applications, data entry, document management, scheduling, and other essential administrative tasks. Through both academic training and personal experience, I have become a detail-oriented, reliable, and adaptable individual, which allows me to perform effectively in fast-paced and demanding environments.</p>
+      </div>
+    </div>
+
+    <!-- 2nd & 3rd paragraphs under the photo & intro -->
+    <div id="aboutMore" style="margin-top:18px;">
+      <p class="justify">I have a strong desire to continually improve myself, and I enjoy taking on tasks that challenge my abilities. Learning new things, whether related to technology, office management, or creative pursuits excites me because growth and development are important to who I am. I believe that embracing new knowledge and skills is the key to becoming more capable and confident both professionally and personally.</p>
+
+      <p class="justify">I am passionate about personal growth, continuous learning, and contributing to an organized and efficient work environment. I enjoy helping others, improving workflows, and finding ways to make everyday tasks more productive and seamless. I am also passionate about creativity and technology, and I love exploring tools and activities that allow me to express myself and expand my knowledge.</p>
+    </div>
+
+    <!-- Personal Info + Hobbies side-by-side -->
+    <div class="info-hobbies">
+      <div id="personalInfo">
+        <h2>Personal Information</h2>
+        <ul>
+            <li>Date of Birth: March 11, 2002</li>
+            <li>Birthplace: Balagtas, Bulacan</li>
+            <li>Currently Living: Pililla, Rizal</li>
+            <li>Graduate of: University of Rizal System - Pililla Campus</li>
+        </ul>
+      </div>
+
+      <div id="hobbies">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Watching movies & anime</li>
+            <li>Beading</li>
+            <li>Playing online games</li>
+            <li>Video editing</li>
+            <li>Vlogging</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 Katrina Joy Gonzalvo</footer>
+
+<script>
+  // animate elements on page load with intended directions
+  window.addEventListener('DOMContentLoaded', () => {
+    const photo = document.getElementById('aboutPhoto');
+    const intro = document.getElementById('aboutIntro');
+    const more = document.getElementById('aboutMore');
+    const personal = document.getElementById('personalInfo');
+    const hobbies = document.getElementById('hobbies');
+
+    // photo zoom in
+    photo.classList.add('anim-zoom','delay-1');
+
+    // intro slide-left (appears on the right side visually)
+    intro.classList.add('anim-slide-left','delay-2');
+
+    // 2nd & 3rd paragraphs slide up
+    const paragraphs = more.querySelectorAll('p');
+    paragraphs.forEach((p, i) => {
+      p.classList.add('anim-fade-up');
+      p.style.animationDelay = (300 + i*120) + 'ms';
+    });
+
+    // personal info slide-right
+    personal.classList.add('anim-slide-right','delay-3');
+
+    // hobbies slide-left
+    hobbies.classList.add('anim-slide-left','delay-3');
+  });
+</script>
+
+</body>
+</html>
