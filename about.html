@@ -1,104 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>About Me</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>About - Katrina Joy Gonzalvo</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <nav>
-    <div class="logo">My Portfolio</div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact Me</a>
-    </div>
+  <div class="logo">My Portfolio</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="#" id="openContactAbout">Contact</a>
+  </div>
 </nav>
 
 <main>
   <h1 class="page-title">About Me</h1>
 
-  <div class="container">
+  <section class="container">
     <div class="about-wrap">
-      <!-- Left: circle photo (zoom in) -->
       <div>
-        <img src="aboutme.JPG" alt="Katrina Joy photo" class="about-photo" id="aboutPhoto">
+        <img src="aboutme.JPG" alt="Katrina Joy" class="about-photo" id="aboutPhoto">
       </div>
 
-      <!-- Right: first paragraph (slide-left) -->
       <div id="aboutIntro" class="justify">
         <p><strong>Hello!</strong> My name is Katrina Joy Gonzalvo. I graduated with a Bachelor of Science in Office Administration, a program that helped me develop strong skills in Microsoft Office applications, data entry, document management, scheduling, and other essential administrative tasks. Through both academic training and personal experience, I have become a detail-oriented, reliable, and adaptable individual, which allows me to perform effectively in fast-paced and demanding environments.</p>
       </div>
     </div>
 
-    <!-- 2nd & 3rd paragraphs under the photo & intro -->
-    <div id="aboutMore" style="margin-top:18px;">
+    <div id="aboutMore" style="margin-top:18px">
       <p class="justify">I have a strong desire to continually improve myself, and I enjoy taking on tasks that challenge my abilities. Learning new things, whether related to technology, office management, or creative pursuits excites me because growth and development are important to who I am. I believe that embracing new knowledge and skills is the key to becoming more capable and confident both professionally and personally.</p>
 
       <p class="justify">I am passionate about personal growth, continuous learning, and contributing to an organized and efficient work environment. I enjoy helping others, improving workflows, and finding ways to make everyday tasks more productive and seamless. I am also passionate about creativity and technology, and I love exploring tools and activities that allow me to express myself and expand my knowledge.</p>
     </div>
 
-    <!-- Personal Info + Hobbies side-by-side -->
     <div class="info-hobbies">
       <div id="personalInfo">
         <h2>Personal Information</h2>
         <ul>
-            <li>Date of Birth: March 11, 2002</li>
-            <li>Birthplace: Balagtas, Bulacan</li>
-            <li>Currently Living: Pililla, Rizal</li>
-            <li>Graduate of: University of Rizal System - Pililla Campus</li>
+          <li>Date of Birth: March 11, 2002</li>
+          <li>Birthplace: Balagtas, Bulacan</li>
+          <li>Currently Living: Pililla, Rizal</li>
+          <li>Graduate of: University of Rizal System - Pililla Campus</li>
         </ul>
       </div>
 
       <div id="hobbies">
         <h2>Hobbies & Interests</h2>
         <ul>
-            <li>Watching movies & anime</li>
-            <li>Beading</li>
-            <li>Playing online games</li>
-            <li>Video editing</li>
-            <li>Vlogging</li>
+          <li>Watching movies & anime</li>
+          <li>Beading</li>
+          <li>Playing online games</li>
+          <li>Video editing</li>
+          <li>Vlogging</li>
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer>© 2025 Katrina Joy Gonzalvo</footer>
 
+<!-- overlay + sidebar (shared) -->
+<div class="overlay" id="overlayAbout" aria-hidden="true"></div>
+
+<aside class="contact-sidebar" id="contactSidebarAbout" aria-hidden="true">
+  <button class="close-btn" id="closeSidebarAbout"><i class="fa-solid fa-xmark"></i></button>
+  <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
+
+  <div class="contact-row">
+    <i class="fa-solid fa-envelope"></i>
+    <div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div>
+  </div>
+
+  <div class="contact-row">
+    <i class="fa-solid fa-phone"></i>
+    <div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div>
+  </div>
+
+  <div class="contact-row">
+    <i class="fa-solid fa-location-dot"></i>
+    <div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div>
+  </div>
+
+  <h4 style="margin-top:12px; margin-bottom:8px; color:var(--deep-lavender)">Social Websites</h4>
+  <div class="social-row">
+    <a href="https://www.instagram.com/katrinajoygonz?igsh=ZnpkYjRiM28za2Jv" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/katrina.gonz.11" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.tiktok.com/@commander_rina?_r=1&_t=ZS-922joKFxwlV" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@momentswithkatrina?si=o5XLHXzA6e2H6lvM" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</aside>
+
 <script>
-  // animate elements on page load with intended directions
+  // open/close for about page
+  const openBtn = document.getElementById('openContactAbout');
+  const side = document.getElementById('contactSidebarAbout');
+  const over = document.getElementById('overlayAbout');
+  const closeBtn = document.getElementById('closeSidebarAbout');
+
+  function openSide(){ side.classList.add('open'); over.classList.add('show'); side.setAttribute('aria-hidden','false'); over.setAttribute('aria-hidden','false'); }
+  function closeSide(){ side.classList.remove('open'); over.classList.remove('show'); side.setAttribute('aria-hidden','true'); over.setAttribute('aria-hidden','true'); }
+
+  openBtn && openBtn.addEventListener('click', e => { e.preventDefault(); openSide(); });
+  closeBtn && closeBtn.addEventListener('click', closeSide);
+  over && over.addEventListener('click', closeSide);
+
+  // animations for about page
   window.addEventListener('DOMContentLoaded', () => {
-    const photo = document.getElementById('aboutPhoto');
-    const intro = document.getElementById('aboutIntro');
-    const more = document.getElementById('aboutMore');
-    const personal = document.getElementById('personalInfo');
-    const hobbies = document.getElementById('hobbies');
+    document.getElementById('aboutPhoto').classList.add('anim-zoom','delay-1');
+    document.getElementById('aboutIntro').classList.add('anim-slide-left','delay-2');
 
-    // photo zoom in
-    photo.classList.add('anim-zoom','delay-1');
+    const ps = document.querySelectorAll('#aboutMore p');
+    ps.forEach((p,i)=>{ p.classList.add('anim-fade-up'); p.style.animationDelay = (260 + i*120) + 'ms'; });
 
-    // intro slide-left (appears on the right side visually)
-    intro.classList.add('anim-slide-left','delay-2');
-
-    // 2nd & 3rd paragraphs slide up
-    const paragraphs = more.querySelectorAll('p');
-    paragraphs.forEach((p, i) => {
-      p.classList.add('anim-fade-up');
-      p.style.animationDelay = (300 + i*120) + 'ms';
-    });
-
-    // personal info slide-right
-    personal.classList.add('anim-slide-right','delay-3');
-
-    // hobbies slide-left
-    hobbies.classList.add('anim-slide-left','delay-3');
+    document.getElementById('personalInfo').classList.add('anim-slide-right','delay-3');
+    document.getElementById('hobbies').classList.add('anim-slide-left','delay-3');
   });
 </script>
 
