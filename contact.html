@@ -1,91 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Me</title>
-<link rel="stylesheet" href="style.css">
-<!-- FontAwesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact - Katrina Joy Gonzalvo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <nav>
-    <div class="logo">My Portfolio</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#" id="openContact">Contact</a></li>
-    </ul>
+  <div class="logo">My Portfolio</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="#" id="openContactPage">Contact</a>
+  </div>
 </nav>
 
-<!-- CONTENT purposely empty -->
-<div class="contact-placeholder">
-    <h1>Click "Contact" to view the sidebar →</h1>
-</div>
+<main>
+  <h1 class="page-title">Contact Me</h1>
 
-<!-- RIGHT SIDE CONTACT PANEL -->
-<div class="contact-sidebar" id="contactSidebar">
+  <section class="container center">
+    <p style="color:var(--muted)">Click the contact button (or wait a second) to view details.</p>
 
-    <span class="close-btn" id="closeContact">&times;</span>
+    <ul style="list-style:none; padding:0; margin-top:18px; color:var(--muted)">
+      <li><strong>Email:</strong> katrinajoygonzalvo@gmail.com</li>
+      <li><strong>Facebook:</strong> facebook.com/katrina.gonz.11</li>
+      <li><strong>Phone:</strong> 09701011643</li>
+    </ul>
+  </section>
+</main>
 
-    <h2>Contact Information</h2>
+<footer>© 2025 Katrina Joy Gonzalvo</footer>
 
-    <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <span>katrinajoygonzalvo@gmail.com</span>
-    </div>
+<!-- overlay + sidebar -->
+<div class="overlay" id="overlayPage" aria-hidden="true"></div>
 
-    <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <span>09701011643</span>
-    </div>
+<aside class="contact-sidebar" id="contactSidebarPage" aria-hidden="true">
+  <button class="close-btn" id="closeSidebarPage"><i class="fa-solid fa-xmark"></i></button>
 
-    <div class="contact-item">
-        <i class="fas fa-location-dot"></i>
-        <span>Rizal, Philippines</span>
-    </div>
+  <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact Information</h3>
 
-    <h3 class="social-title">Social Websites</h3>
+  <div class="contact-row">
+    <i class="fa-solid fa-envelope"></i>
+    <div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div>
+  </div>
 
-    <div class="social-icons">
+  <div class="contact-row">
+    <i class="fa-solid fa-phone"></i>
+    <div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div>
+  </div>
 
-        <a href="https://www.instagram.com/katrinajoygonz?igsh=ZnpkYjRiM28za2Jv" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
+  <div class="contact-row">
+    <i class="fa-solid fa-location-dot"></i>
+    <div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div>
+  </div>
 
-        <a href="https://www.facebook.com/katrina.gonz.11" target="_blank">
-            <i class="fab fa-facebook"></i>
-        </a>
-
-        <a href="https://www.tiktok.com/@commander_rina?_r=1&_t=ZS-922joKFxwlV" target="_blank">
-            <i class="fab fa-tiktok"></i>
-        </a>
-
-        <a href="https://youtube.com/@momentswithkatrina?si=o5XLHXzA6e2H6lvM" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
-
-        <a href="#" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-
-    </div>
-
-</div>
+  <h4 style="margin-top:12px; margin-bottom:8px; color:var(--deep-lavender)">Social Websites</h4>
+  <div class="social-row">
+    <a href="https://www.instagram.com/katrinajoygonz?igsh=ZnpkYjRiM28za2Jv" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/katrina.gonz.11" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.tiktok.com/@commander_rina?_r=1&_t=ZS-922joKFxwlV" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@momentswithkatrina?si=o5XLHXzA6e2H6lvM" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</aside>
 
 <script>
-// OPEN CONTACT SIDEBAR
-document.getElementById("openContact").onclick = function () {
-    document.getElementById("contactSidebar").classList.add("open");
-}
+  // open/close for contact page
+  const openPage = document.getElementById('openContactPage');
+  const sidePage = document.getElementById('contactSidebarPage');
+  const overlayPage = document.getElementById('overlayPage');
+  const closePage = document.getElementById('closeSidebarPage');
 
-// CLOSE CONTACT SIDEBAR
-document.getElementById("closeContact").onclick = function () {
-    document.getElementById("contactSidebar").classList.remove("open");
-}
+  function openPageSide(){ sidePage.classList.add('open'); overlayPage.classList.add('show'); sidePage.setAttribute('aria-hidden','false'); overlayPage.setAttribute('aria-hidden','false'); }
+  function closePageSide(){ sidePage.classList.remove('open'); overlayPage.classList.remove('show'); sidePage.setAttribute('aria-hidden','true'); overlayPage.setAttribute('aria-hidden','true'); }
+
+  openPage && openPage.addEventListener('click', e => { e.preventDefault(); openPageSide(); });
+  closePage && closePage.addEventListener('click', closePageSide);
+  overlayPage && overlayPage.addEventListener('click', closePageSide);
+
+  // auto-open when visiting contact.html (small delay for nicer effect)
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(openPageSide, 150);
+  });
 </script>
 
 </body>
