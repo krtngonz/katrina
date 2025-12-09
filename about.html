@@ -27,15 +27,12 @@
 
   <h1 class="page-title">About Me</h1>
 
-  <!-- PROFILE SECTION -->
-  <section class="about-wrap" style="margin-bottom:30px; display:flex; gap:25px; align-items:center;">
-
-    <!-- PHOTO (SLIDE RIGHT FROM LEFT) -->
+  <!-- PROFILE SECTION: Picture Left + Description Right -->
+  <section class="about-wrap">
     <img src="aboutme.JPG" 
       class="about-photo anim-slide-right delay-1"
-      style="width:260px; height:auto; border-radius:14px;">
+      alt="Katrina Joy">
 
-    <!-- DESCRIPTION (SLIDE LEFT FROM RIGHT) -->
     <div class="anim-slide-left delay-2">
       <p class="justify">
         <b>Hello! My name is Katrina Joy Gonzalvo.</b> I graduated with a Bachelor of Science in Office Administration, a program that helped me build strong skills in Microsoft Office applications, data entry, document management, scheduling, and various administrative tasks. Throughout my academic journey and personal experiences, I have become known for being detail-oriented, reliable, and adaptable, allowing me to thrive in fast-paced and dynamic environments.
@@ -51,16 +48,14 @@
     </div>
   </section>
 
- <!-- WORK EXPERIENCE -->
-  <h2 class="page-title" style="font-size:1.6rem; margin-top:10px;">Work Experience</h2>
+  <!-- WORK EXPERIENCE -->
+  <h2 class="page-title" style="font-size:1.6rem; margin-top:30px;">Work Experience</h2>
 
-  <!-- EXPERIENCE 1 -->
-  <div class="project-card anim-slide-up delay-1" style="padding-top:10px;">
+  <div class="project-card anim-slide-up delay-1">
     <div class="exp-header">
       <h3 class="company-name">ICONEVILLE CONSTRUCTION AND DEVELOPMENT</h3>
       <span class="exp-date">Feb 2025 – Apr 2025</span>
     </div>
-
     <p><b>Position:</b> Executive Office Intern</p>
     <ul>
       <li>Utilized Microsoft Office tools for preparing presentations and spreadsheets.</li>
@@ -69,13 +64,11 @@
     </ul>
   </div>
 
-  <!-- EXPERIENCE 2 -->
   <div class="project-card anim-slide-up delay-2">
     <div class="exp-header">
       <h3 class="company-name">J.R AQUINO LAW OFFICE - LAWYER & NOTARY PUBLIC</h3>
       <span class="exp-date">Sep 2024 – Nov 2024</span>
     </div>
-
     <p><b>Position:</b> Law Office Intern</p>
     <ul>
       <li>Assisted in preparing and organizing legal documents for notarization.</li>
@@ -85,13 +78,11 @@
     </ul>
   </div>
 
-  <!-- EXPERIENCE 3 -->
   <div class="project-card anim-slide-up delay-3">
     <div class="exp-header">
       <h3 class="company-name">QUEEN MARY HELP OF CHRISTIANS HOSPITAL</h3>
       <span class="exp-date">Feb 2024 – May 2024</span>
     </div>
-
     <p><b>Position:</b> Medical Office Intern</p>
     <ul>
       <li>Managed patient records and documentation.</li>
@@ -100,8 +91,8 @@
     </ul>
   </div>
 
-  <!-- PERSONAL INFO + HOBBIES (SLIDE UP) -->
-  <div class="info-hobbies anim-slide-up delay-4" style="margin-top:25px;">
+  <!-- PERSONAL INFO + HOBBIES -->
+  <div class="info-hobbies anim-slide-up delay-4">
     <div>
       <h2 style="font-size:1.4rem;">Personal Information</h2>
       <ul>
@@ -132,31 +123,21 @@
 
 <aside class="contact-sidebar" id="contactSidebar">
   <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
-
   <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
 
   <div class="contact-row">
     <i class="fa-solid fa-envelope"></i>
-    <div>
-      <div style="font-weight:600">Email</div>
-      <div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div>
-    </div>
+    <div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div>
   </div>
 
   <div class="contact-row">
     <i class="fa-solid fa-phone"></i>
-    <div>
-      <div style="font-weight:600">Phone</div>
-      <div style="font-size:14px;color:var(--muted)">09701011643</div>
-    </div>
+    <div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div>
   </div>
 
   <div class="contact-row">
     <i class="fa-solid fa-location-dot"></i>
-    <div>
-      <div style="font-weight:600">Location</div>
-      <div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div>
-    </div>
+    <div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div>
   </div>
 </aside>
 
@@ -166,18 +147,9 @@
   const openNav = document.getElementById('openContactNav');
   const closeBtn = document.getElementById('closeSidebar');
 
-  openNav.addEventListener('click', e => { e.preventDefault(); openSidebar(); });
-  closeBtn.addEventListener('click', closeSidebar);
-  overlay.addEventListener('click', closeSidebar);
-
-  function openSidebar(){
-    sidebar.classList.add('open');
-    overlay.classList.add('show');
-  }
-  function closeSidebar(){
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-  }
+  openNav && openNav.addEventListener('click', e => { e.preventDefault(); sidebar.classList.add('open'); overlay.classList.add('show'); });
+  closeBtn && closeBtn.addEventListener('click', () => { sidebar.classList.remove('open'); overlay.classList.remove('show'); });
+  overlay && overlay.addEventListener('click', () => { sidebar.classList.remove('open'); overlay.classList.remove('show'); });
 </script>
 
 </body>
