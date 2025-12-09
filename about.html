@@ -19,7 +19,8 @@
     <a href="about.html">About Me</a>
     <a href="skills.html">Skills</a>
     <a href="projects.html">Projects</a>
-    <a href="#" id="openContactNav">Contact</a>
+    <!-- FIXED: ID matches the JS selector -->
+    <a href="#" id="openContactProj">Contact</a>
   </div>
 </nav>
 
@@ -140,14 +141,25 @@
 </aside>
 
 <script>
-  // open/close for aount me page
+  // open/close for about.html sidebar
   const openProj = document.getElementById('openContactProj');
   const sideProj = document.getElementById('contactSidebarProj');
   const overProj = document.getElementById('overlayProj');
   const closeProj = document.getElementById('closeSidebarProj');
 
-  function openP(){ sideProj.classList.add('open'); overProj.classList.add('show'); sideProj.setAttribute('aria-hidden','false'); overProj.setAttribute('aria-hidden','false'); }
-  function closeP(){ sideProj.classList.remove('open'); overProj.classList.remove('show'); sideProj.setAttribute('aria-hidden','true'); overProj.setAttribute('aria-hidden','true'); }
+  function openP(){ 
+    sideProj.classList.add('open'); 
+    overProj.classList.add('show'); 
+    sideProj.setAttribute('aria-hidden','false'); 
+    overProj.setAttribute('aria-hidden','false'); 
+  }
+
+  function closeP(){ 
+    sideProj.classList.remove('open'); 
+    overProj.classList.remove('show'); 
+    sideProj.setAttribute('aria-hidden','true'); 
+    overProj.setAttribute('aria-hidden','true'); 
+  }
 
   openProj && openProj.addEventListener('click', e => { e.preventDefault(); openP(); });
   closeProj && closeProj.addEventListener('click', closeP);
@@ -156,7 +168,10 @@
   // project cards animation
   window.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.project-card');
-    cards.forEach((c,i) => { c.style.animation = 'fadeInUp .6s ease forwards'; c.style.animationDelay = (120 + i*130) + 'ms'; });
+    cards.forEach((c,i) => { 
+      c.style.animation = 'fadeInUp .6s ease forwards'; 
+      c.style.animationDelay = (120 + i*130) + 'ms'; 
+    });
   });
 </script>
 
