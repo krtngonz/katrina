@@ -1,132 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About - Katrina Joy Gonzalvo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+    .container { width: 90%; max-width: 1100px; margin: auto; padding: 30px 0; }
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
+    /* PROFILE SECTION */
+    .profile-section { display: flex; align-items: center; gap: 30px; }
+    .profile-photo { width: 3in; height: 2in; object-fit: cover; border-radius: 15px; opacity: 0; animation: fadeIn 1.5s forwards; }
+
+    .intro-text { opacity: 0; animation: slideDown 1.5s forwards; }
+    .intro-text b { font-weight: 700; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes slideLeft { from { opacity: 0; transform: translateX(-40px);} to { opacity: 1; transform: translateX(0);} }
+    @keyframes slideRight { from { opacity: 0; transform: translateX(40px);} to { opacity: 1; transform: translateX(0);} }
+
+    /* SECTION TITLES */
+    h2 { margin-top: 40px; color: #333; border-left: 5px solid #007bff; padding-left: 10px; }
+
+    /* WORK EXPERIENCE */
+    .work-item { margin-bottom: 25px; }
+    .logo { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; }
+
+    /* PERSONAL INFO + HOBBIES */
+    .info-section { display: flex; gap: 50px; margin-top: 30px; }
+    .personal-info { flex: 1; animation: slideRight 1.5s forwards; opacity: 0; }
+    .hobbies { flex: 1; animation: slideLeft 1.5s forwards; opacity: 0; }
+
+    ul { list-style: none; padding: 0; }
+    ul li { margin-bottom: 8px; }
+  </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">My Portfolio</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="#" id="openContactAbout">Contact</a>
+<div class="container">
+
+  <!-- PROFILE SECTION -->
+  <div class="profile-section">
+    <img src="yourphoto.jpg" alt="Profile Photo" class="profile-photo" />
+
+    <div class="intro-text">
+      <p><b>Hello! I'm Kat Gonzalvo</b>, a motivated and detail-oriented fresh graduate with hands-on experience in office administration across various professional environments. I am passionate about supporting organizational operations and ensuring tasks are completed efficiently and professionally.</p>
+      <p>I have a strong foundation in administrative work, document management, and digital tools. My internship experiences have equipped me with the knowledge and confidence to contribute effectively in dynamic work environments.</p>
+    </div>
   </div>
-</nav>
 
-<main>
-  <h1 class="page-title">About Me</h1>
 
-  <section class="container">
-    <div class="about-wrap">
-      <div>
-        <img src="aboutme.JPG" alt="Katrina Joy" class="about-photo" id="aboutPhoto">
-      </div>
+  <!-- WORK EXPERIENCE -->
+  <h2>Work Experience</h2>
 
-      <div id="aboutIntro" class="justify">
-        <p><strong>Hello!</strong> My name is Katrina Joy Gonzalvo. I graduated with a Bachelor of Science in Office Administration, a program that helped me develop strong skills in Microsoft Office applications, data entry, document management, scheduling, and other essential administrative tasks. Through both academic training and personal experience, I have become a detail-oriented, reliable, and adaptable individual, which allows me to perform effectively in fast-paced and demanding environments.</p>
-      </div>
+  <div class="work-item">
+    <img src="iconeville-logo.png" class="logo" />
+    <h3>ICONEVILLE CONSTRUCTION AND DEVELOPMENT</h3>
+    <p><i>Feb 2025 - Apr 2025</i></p>
+    <p><b>Position:</b> Executive Office Intern</p>
+    <ul>
+      <li>Utilized Microsoft Office tools for preparing presentations and spreadsheets.</li>
+      <li>Handled filing, record-keeping, and document organization.</li>
+      <li>Accurately encoded information into databases or spreadsheets.</li>
+    </ul>
+  </div>
+
+  <div class="work-item">
+    <img src="aquinolaw-logo.png" class="logo" />
+    <h3>J.R AQUINO LAW OFFICE - LAWYER & NOTARY PUBLIC</h3>
+    <p><i>Sep 2024 - Nov 2024</i></p>
+    <p><b>Position:</b> Law Office Intern</p>
+    <ul>
+      <li>Assisted in preparing and organizing legal documents for notarization.</li>
+      <li>Logged and recorded notarized documents for proper filing and reference.</li>
+      <li>Assisted lawyer in preparing case folders, pleadings, and affidavits.</li>
+      <li>Coordinated with lawyers for signing and authorizing legal documents.</li>
+    </ul>
+  </div>
+
+  <div class="work-item">
+    <img src="qmhch-logo.png" class="logo" />
+    <h3>QUEEN MARY HELP OF CHRISTIANS HOSPITAL</h3>
+    <p><i>Feb 2024 - May 2024</i></p>
+    <p><b>Position:</b> Medical Office Intern</p>
+    <ul>
+      <li>Managed patient records.</li>
+      <li>Filed, scanned, and organized medical documents.</li>
+      <li>Utilized Microsoft Office tools for data entry and coding.</li>
+    </ul>
+  </div>
+
+
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+  <p><b>UNIVERSITY OF RIZAL SYSTEM</b> (2021 - 2025)<br />Bachelor of Science in Office Administration<br />Pililla, Rizal</p>
+
+
+  <!-- PERSONAL INFO + HOBBIES -->
+  <div class="info-section">
+
+    <div class="personal-info">
+      <h2>Personal Information</h2>
+      <ul>
+        <li><b>Date of Birth:</b> March 11, 2002</li>
+        <li><b>Birthplace:</b> Balagtas, Bulacan</li>
+        <li><b>Currently Living In:</b> Pililla, Rizal</li>
+      </ul>
     </div>
 
-    <div id="aboutMore" style="margin-top:18px">
-      <p class="justify">I have a strong desire to continually improve myself, and I enjoy taking on tasks that challenge my abilities. Learning new things, whether related to technology, office management, or creative pursuits excites me because growth and development are important to who I am. I believe that embracing new knowledge and skills is the key to becoming more capable and confident both professionally and personally.</p>
-
-      <p class="justify">I am passionate about personal growth, continuous learning, and contributing to an organized and efficient work environment. I enjoy helping others, improving workflows, and finding ways to make everyday tasks more productive and seamless. I am also passionate about creativity and technology, and I love exploring tools and activities that allow me to express myself and expand my knowledge.</p>
+    <div class="hobbies">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>🎬 Watching Movies & Anime</li>
+        <li>📚 Reading</li>
+        <li>🎮 Playing Online Games</li>
+        <li>✂️ Video Editing</li>
+        <li>📹 Vlogging</li>
+      </ul>
     </div>
 
-    <div class="info-hobbies">
-      <div id="personalInfo">
-        <h2>Personal Information</h2>
-        <ul>
-          <li>Date of Birth: March 11, 2002</li>
-          <li>Birthplace: Balagtas, Bulacan</li>
-          <li>Currently Living: Pililla, Rizal</li>
-          <li>Graduate of: University of Rizal System - Pililla Campus</li>
-        </ul>
-      </div>
-
-      <div id="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <ul>
-          <li>Watching movies & anime</li>
-          <li>Beading</li>
-          <li>Playing online games</li>
-          <li>Video editing</li>
-          <li>Vlogging</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>© 2025 Katrina Joy Gonzalvo</footer>
-
-<!-- overlay + sidebar (shared) -->
-<div class="overlay" id="overlayAbout" aria-hidden="true"></div>
-
-<aside class="contact-sidebar" id="contactSidebarAbout" aria-hidden="true">
-  <button class="close-btn" id="closeSidebarAbout"><i class="fa-solid fa-xmark"></i></button>
-  <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-envelope"></i>
-    <div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div>
   </div>
 
-  <div class="contact-row">
-    <i class="fa-solid fa-phone"></i>
-    <div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div>
-  </div>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-location-dot"></i>
-    <div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div>
-  </div>
-
-  <h4 style="margin-top:12px; margin-bottom:8px; color:var(--deep-lavender)">Social Websites</h4>
-  <div class="social-row">
-    <a href="https://www.instagram.com/katrinajoygonz?igsh=ZnpkYjRiM28za2Jv" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/katrina.gonz.11" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.tiktok.com/@commander_rina?_r=1&_t=ZS-922joKFxwlV" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://youtube.com/@momentswithkatrina?si=o5XLHXzA6e2H6lvM" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
-</aside>
-
-<script>
-  // open/close for about page
-  const openBtn = document.getElementById('openContactAbout');
-  const side = document.getElementById('contactSidebarAbout');
-  const over = document.getElementById('overlayAbout');
-  const closeBtn = document.getElementById('closeSidebarAbout');
-
-  function openSide(){ side.classList.add('open'); over.classList.add('show'); side.setAttribute('aria-hidden','false'); over.setAttribute('aria-hidden','false'); }
-  function closeSide(){ side.classList.remove('open'); over.classList.remove('show'); side.setAttribute('aria-hidden','true'); over.setAttribute('aria-hidden','true'); }
-
-  openBtn && openBtn.addEventListener('click', e => { e.preventDefault(); openSide(); });
-  closeBtn && closeBtn.addEventListener('click', closeSide);
-  over && over.addEventListener('click', closeSide);
-
-  // animations for about page
-  window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('aboutPhoto').classList.add('anim-zoom','delay-1');
-    document.getElementById('aboutIntro').classList.add('anim-slide-left','delay-2');
-
-    const ps = document.querySelectorAll('#aboutMore p');
-    ps.forEach((p,i)=>{ p.classList.add('anim-fade-up'); p.style.animationDelay = (260 + i*120) + 'ms'; });
-
-    document.getElementById('personalInfo').classList.add('anim-slide-right','delay-3');
-    document.getElementById('hobbies').classList.add('anim-slide-left','delay-3');
-  });
-</script>
+</div>
 
 </body>
 </html>
