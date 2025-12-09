@@ -31,7 +31,7 @@
   <section class="about-wrap" style="margin-bottom:30px; display:flex; gap:25px; align-items:center;">
 
     <!-- PHOTO (SLIDE RIGHT FROM LEFT) -->
-    <img src="yourphoto.jpg" 
+    <img src="aboutme.JPG" 
       class="about-photo anim-slide-right delay-1"
       style="width:260px; height:auto; border-radius:14px;">
 
@@ -51,7 +51,7 @@
     </div>
   </section>
 
-  <!-- WORK EXPERIENCE -->
+ <!-- WORK EXPERIENCE -->
   <h2 class="page-title" style="font-size:1.6rem; margin-top:10px;">Work Experience</h2>
 
   <!-- EXPERIENCE 1 -->
@@ -73,4 +73,112 @@
   <div class="project-card anim-slide-up delay-2">
     <div class="exp-header">
       <h3 class="company-name">J.R AQUINO LAW OFFICE - LAWYER & NOTARY PUBLIC</h3>
-      <span class="exp-date">Sep 202
+      <span class="exp-date">Sep 2024 – Nov 2024</span>
+    </div>
+
+    <p><b>Position:</b> Law Office Intern</p>
+    <ul>
+      <li>Assisted in preparing and organizing legal documents for notarization.</li>
+      <li>Logged documents for proper filing and reference.</li>
+      <li>Prepared case folders, pleadings, and affidavits.</li>
+      <li>Coordinated with the lawyer for signing and authorizations.</li>
+    </ul>
+  </div>
+
+  <!-- EXPERIENCE 3 -->
+  <div class="project-card anim-slide-up delay-3">
+    <div class="exp-header">
+      <h3 class="company-name">QUEEN MARY HELP OF CHRISTIANS HOSPITAL</h3>
+      <span class="exp-date">Feb 2024 – May 2024</span>
+    </div>
+
+    <p><b>Position:</b> Medical Office Intern</p>
+    <ul>
+      <li>Managed patient records and documentation.</li>
+      <li>Filed, scanned, and organized medical documents.</li>
+      <li>Used Microsoft Office tools for data entry and coding.</li>
+    </ul>
+  </div>
+
+  <!-- PERSONAL INFO + HOBBIES (SLIDE UP) -->
+  <div class="info-hobbies anim-slide-up delay-4" style="margin-top:25px;">
+    <div>
+      <h2 style="font-size:1.4rem;">Personal Information</h2>
+      <ul>
+        <li><b>Date of Birth:</b> March 11, 2002</li>
+        <li><b>Birthplace:</b> Balagtas, Bulacan</li>
+        <li><b>Currently Living In:</b> Pililla, Rizal</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 style="font-size:1.4rem;">Hobbies & Interests</h2>
+      <ul>
+        <li>🎬 Watching Movies & Anime</li>
+        <li>📚 Reading</li>
+        <li>🎮 Playing Online Games</li>
+        <li>✂️ Video Editing</li>
+        <li>📹 Vlogging</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer>© 2025 Katrina Joy Gonzalvo</footer>
+
+<!-- CONTACT SIDEBAR -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="contact-sidebar" id="contactSidebar">
+  <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+
+  <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
+
+  <div class="contact-row">
+    <i class="fa-solid fa-envelope"></i>
+    <div>
+      <div style="font-weight:600">Email</div>
+      <div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div>
+    </div>
+  </div>
+
+  <div class="contact-row">
+    <i class="fa-solid fa-phone"></i>
+    <div>
+      <div style="font-weight:600">Phone</div>
+      <div style="font-size:14px;color:var(--muted)">09701011643</div>
+    </div>
+  </div>
+
+  <div class="contact-row">
+    <i class="fa-solid fa-location-dot"></i>
+    <div>
+      <div style="font-weight:600">Location</div>
+      <div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div>
+    </div>
+  </div>
+</aside>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const sidebar = document.getElementById('contactSidebar');
+  const openNav = document.getElementById('openContactNav');
+  const closeBtn = document.getElementById('closeSidebar');
+
+  openNav.addEventListener('click', e => { e.preventDefault(); openSidebar(); });
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+  function openSidebar(){
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
+  }
+  function closeSidebar(){
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+  }
+</script>
+
+</body>
+</html>
