@@ -118,34 +118,47 @@
 
 <footer>© 2025 Katrina Joy Gonzalvo</footer>
 
-<!-- CONTACT SIDEBAR -->
-<div class="overlay" id="overlay"></div>
+<!-- overlay + sidebar -->
+<div class="overlay" id="overlayProj" aria-hidden="true"></div>
 
-<aside class="contact-sidebar" id="contactSidebar">
-  <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
+<aside class="contact-sidebar" id="contactSidebarProj" aria-hidden="true">
+  <button class="close-btn" id="closeSidebarProj"><i class="fa-solid fa-xmark"></i></button>
+
   <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
+  <div class="contact-row"><i class="fa-solid fa-envelope"></i><div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div></div>
+  <div class="contact-row"><i class="fa-solid fa-phone"></i><div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div></div>
+  <div class="contact-row"><i class="fa-solid fa-location-dot"></i><div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div></div>
 
-  <div class="contact-row">
-    <i class="fa-solid fa-envelope"></i>
-    <div><div style="font-weight:600">Email</div><div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div></div>
-  </div>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-phone"></i>
-    <div><div style="font-weight:600">Phone</div><div style="font-size:14px;color:var(--muted)">09701011643</div></div>
-  </div>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-location-dot"></i>
-    <div><div style="font-weight:600">Location</div><div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div></div>
+  <h4 style="margin-top:12px; margin-bottom:8px; color:var(--deep-lavender)">Social Websites</h4>
+  <div class="social-row">
+    <a href="https://www.instagram.com/katrinajoygonz?igsh=ZnpkYjRiM28za2Jv" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/katrina.gonz.11" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.tiktok.com/@commander_rina?_r=1&_t=ZS-922joKFxwlV" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@momentswithkatrina?si=o5XLHXzA6e2H6lvM" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </aside>
 
 <script>
-  const overlay = document.getElementById('overlay');
-  const sidebar = document.getElementById('contactSidebar');
-  const openNav = document.getElementById('openContactNav');
-  const closeBtn = document.getElementById('closeSidebar');
+  // open/close for aount me page
+  const openProj = document.getElementById('openContactProj');
+  const sideProj = document.getElementById('contactSidebarProj');
+  const overProj = document.getElementById('overlayProj');
+  const closeProj = document.getElementById('closeSidebarProj');
 
-  openNav && openNav.addEventListener('click', e => { e.preventDefault(); sidebar.classList.add('open'); overlay.classList.add('show'); });
-  closeBtn && closeBtn.addEventListener('click', () => { sidebar.classList.remove('open'); overlay.classList.remove('
+  function openP(){ sideProj.classList.add('open'); overProj.classList.add('show'); sideProj.setAttribute('aria-hidden','false'); overProj.setAttribute('aria-hidden','false'); }
+  function closeP(){ sideProj.classList.remove('open'); overProj.classList.remove('show'); sideProj.setAttribute('aria-hidden','true'); overProj.setAttribute('aria-hidden','true'); }
+
+  openProj && openProj.addEventListener('click', e => { e.preventDefault(); openP(); });
+  closeProj && closeProj.addEventListener('click', closeP);
+  overProj && overProj.addEventListener('click', closeP);
+
+  // project cards animation
+  window.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((c,i) => { c.style.animation = 'fadeInUp .6s ease forwards'; c.style.animationDelay = (120 + i*130) + 'ms'; });
+  });
+</script>
+
+</body>
+</html>
