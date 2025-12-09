@@ -28,30 +28,39 @@
   <h1 class="page-title">About Me</h1>
 
   <!-- PROFILE SECTION -->
-  <section class="about-wrap" style="margin-bottom:30px;">
-    <img src="homepage.jpg" class="about-photo anim-zoom delay-1"
-      style="width:1050px; max-width:260px; height:auto; border-radius:14px;">
+  <section class="about-wrap" style="margin-bottom:30px; display:flex; gap:25px; align-items:center;">
 
+    <!-- PHOTO (SLIDE RIGHT FROM LEFT) -->
+    <img src="yourphoto.jpg" 
+      class="about-photo anim-slide-right delay-1"
+      style="width:260px; height:auto; border-radius:14px;">
+
+    <!-- DESCRIPTION (SLIDE LEFT FROM RIGHT) -->
     <div class="anim-slide-left delay-2">
       <p class="justify">
-        <b>Hello! I'm Kat Gonzalvo</b>, a motivated and detail-oriented fresh graduate with hands-on
-        experience in office administration across various professional environments. I am passionate
-        about supporting organizational operations and ensuring tasks are completed efficiently.
+        <b>Hello! My name is Katrina Joy Gonzalvo.</b> I graduated with a Bachelor of Science in Office Administration, a program that helped me build strong skills in Microsoft Office applications, data entry, document management, scheduling, and various administrative tasks. Throughout my academic journey and personal experiences, I have become known for being detail-oriented, reliable, and adaptable, allowing me to thrive in fast-paced and dynamic environments.
       </p>
+
       <p class="justify">
-        I have a strong background in administrative work, document management, and digital tools. My internship
-        experiences helped me develop strong organizational and communication skills fit for dynamic offices.
+        I enjoy taking on new challenges because they help me grow, improve, and expand my knowledge. Learning new things—whether related to office work, technology, or creative pursuits—is something I value greatly. I believe that continuous learning and self-improvement are essential to becoming more capable and confident both professionally and personally.
+      </p>
+
+      <p class="justify">
+        I am passionate about continuous learning, personal development, organization, and creating efficient workflows. I take pride in helping others, supporting team operations, and contributing to a productive work environment. I also have a passion for creativity and technology, especially in areas that allow me to explore, express myself, and learn new skills.
       </p>
     </div>
   </section>
 
-  <!-- WORK EXPERIENCE BEFORE PERSONAL INFO -->
+  <!-- WORK EXPERIENCE -->
   <h2 class="page-title" style="font-size:1.6rem; margin-top:10px;">Work Experience</h2>
 
-  <div class="project-card anim-fade-up delay-1">
-    <img src="iconeville-logo.png" class="logo" style="width:60px; margin-bottom:10px;">
-    <h3>ICONEVILLE CONSTRUCTION AND DEVELOPMENT</h3>
-    <p><i>Feb 2025 - Apr 2025</i></p>
+  <!-- EXPERIENCE 1 -->
+  <div class="project-card anim-slide-up delay-1" style="padding-top:10px;">
+    <div class="exp-header">
+      <h3 class="company-name">ICONEVILLE CONSTRUCTION AND DEVELOPMENT</h3>
+      <span class="exp-date">Feb 2025 – Apr 2025</span>
+    </div>
+
     <p><b>Position:</b> Executive Office Intern</p>
     <ul>
       <li>Utilized Microsoft Office tools for preparing presentations and spreadsheets.</li>
@@ -60,110 +69,8 @@
     </ul>
   </div>
 
-  <div class="project-card anim-fade-up delay-2">
-    <img src="aquinolaw-logo.png" class="logo" style="width:60px; margin-bottom:10px;">
-    <h3>J.R AQUINO LAW OFFICE - LAWYER & NOTARY PUBLIC</h3>
-    <p><i>Sep 2024 - Nov 2024</i></p>
-    <p><b>Position:</b> Law Office Intern</p>
-    <ul>
-      <li>Assisted in preparing and organizing legal documents for notarization.</li>
-      <li>Logged documents for proper filing and reference.</li>
-      <li>Prepared case folders, pleadings, and affidavits.</li>
-      <li>Coordinated with the lawyer for signing and authorizations.</li>
-    </ul>
-  </div>
-
-  <div class="project-card anim-fade-up delay-3">
-    <img src="qmhch-logo.png" class="logo" style="width:60px; margin-bottom:10px;">
-    <h3>QUEEN MARY HELP OF CHRISTIANS HOSPITAL</h3>
-    <p><i>Feb 2024 - May 2024</i></p>
-    <p><b>Position:</b> Medical Office Intern</p>
-    <ul>
-      <li>Managed patient records and documentation.</li>
-      <li>Filed, scanned, and organized medical documents.</li>
-      <li>Used Microsoft Office tools for data entry and coding.</li>
-    </ul>
-  </div>
-
-  <!-- PERSONAL INFO + HOBBIES -->
-  <div class="info-hobbies anim-fade-up delay-4">
-    <div>
-      <h2 style="font-size:1.4rem;">Personal Information</h2>
-      <ul>
-        <li><b>Date of Birth:</b> March 11, 2002</li>
-        <li><b>Birthplace:</b> Balagtas, Bulacan</li>
-        <li><b>Currently Living In:</b> Pililla, Rizal</li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 style="font-size:1.4rem;">Hobbies & Interests</h2>
-      <ul>
-        <li>🎬 Watching Movies & Anime</li>
-        <li>📚 Reading</li>
-        <li>🎮 Playing Online Games</li>
-        <li>✂️ Video Editing</li>
-        <li>📹 Vlogging</li>
-      </ul>
-    </div>
-  </div>
-
-</main>
-
-<footer>© 2025 Katrina Joy Gonzalvo</footer>
-
-<!-- Overlay + contact sidebar (same script as home) -->
-<div class="overlay" id="overlay"></div>
-
-<aside class="contact-sidebar" id="contactSidebar">
-  <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
-
-  <h3 style="margin:0 0 6px 0; color:var(--deep-lavender)">Contact</h3>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-envelope"></i>
-    <div>
-      <div style="font-weight:600">Email</div>
-      <div style="font-size:14px;color:var(--muted)">katrinajoygonzalvo@gmail.com</div>
-    </div>
-  </div>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-phone"></i>
-    <div>
-      <div style="font-weight:600">Phone</div>
-      <div style="font-size:14px;color:var(--muted)">09701011643</div>
-    </div>
-  </div>
-
-  <div class="contact-row">
-    <i class="fa-solid fa-location-dot"></i>
-    <div>
-      <div style="font-weight:600">Location</div>
-      <div style="font-size:14px;color:var(--muted)">Rizal, Philippines</div>
-    </div>
-  </div>
-</aside>
-
-<script>
-  const overlay = document.getElementById('overlay');
-  const sidebar = document.getElementById('contactSidebar');
-  const openNav = document.getElementById('openContactNav');
-  const closeBtn = document.getElementById('closeSidebar');
-
-  function openSidebar(){
-    sidebar.classList.add('open');
-    overlay.classList.add('show');
-  }
-  function closeSidebar(){
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-  }
-
-  openNav.addEventListener('click', e => { e.preventDefault(); openSidebar(); });
-  closeBtn.addEventListener('click', closeSidebar);
-  overlay.addEventListener('click', closeSidebar);
-</script>
-
-</body>
-</html>
+  <!-- EXPERIENCE 2 -->
+  <div class="project-card anim-slide-up delay-2">
+    <div class="exp-header">
+      <h3 class="company-name">J.R AQUINO LAW OFFICE - LAWYER & NOTARY PUBLIC</h3>
+      <span class="exp-date">Sep 202
